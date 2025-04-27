@@ -269,22 +269,24 @@ html, body {
     outline: none;
     border-radius: 8px;
     background: linear-gradient(to top, rgba(80, 62, 54, 0.9) 80%, rgba(248, 244, 240, 0.8) 100%);
-    color: #fff;
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.8); /* Add glow */
     transition: all 0.3s ease;
     margin: 5px 0;
     font-size: 22px;     
     white-space: nowrap;
 }
 .button:hover {
-    background: #3f3604;
-    transition: all 0.3s ease; 
+    background: #2a2402;
+    transition: all 0.3s ease;
+    color: #ffd700; /* golden color on hover */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.8); /* golden glow */
+    transition: all 0.3s ease; /* smooth transition */
 }
 
 .navbar__links:hover {
     color: #ffd700;
     text-shadow: 0 0 8px #ffd700;
-    transition: all 0.3s ease;
-
 }
 /* ----------------- Mobile Responsive Navbar ----------------- */
 @media screen and (max-width: 960px) {
