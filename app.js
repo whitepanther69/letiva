@@ -88,7 +88,7 @@ function changeBackground() {
   heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
 }
 
-setInterval(changeBackground, 3000);
+setInterval(changeBackground, 5000);
 
 const music = document.getElementById('background-music');
 const button = document.getElementById('music-button');
