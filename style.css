@@ -402,9 +402,35 @@ html, body {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     text-align: center; /* Ensure text is centered */
-    transition: background-image 1s ease-in-out; /* Smooth transition between backgrounds */
-
+    overflow: hidden;
 }
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 3s ease-in-out, transform 20s ease; /* slower fade and slower zoom */
+  z-index: 1; /* behind the text */
+  transform: scale(1); 
+}
+
+.background1,
+.background2 {
+  animation: zoomSlow 40s infinite alternate;
+}
+
+@keyframes zoomSlow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1); /* slight zoom */
+  }
+}
+
 .main__content h1 {
   position: absolute;
   bottom: 20px;
