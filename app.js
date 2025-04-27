@@ -79,16 +79,26 @@ const images = [
 ];
 
 let currentIndex = 0;
-const heroSection = document.getElementById('hero-section');
+const bg1 = document.querySelector('.background1');
+const bg2 = document.querySelector('.background2');
 
-heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
+bg1.style.backgroundImage = `url('${images[0]}')`;
+bg2.style.opacity = 0;
 
 function changeBackground() {
-  currentIndex = (currentIndex + 1) % images.length;
-  heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
+  const nextIndex = (currentIndex + 1) % images.length;
+
+  bg2.style.backgroundImage = `url('${images[nextIndex]}')`;
+  bg2.style.opacity = 1;
+
+  setTimeout(() => {
+    bg1.style.backgroundImage = `url('${images[nextIndex]}')`;
+    bg2.style.opacity = 0;
+    currentIndex = nextIndex;
+  }, 3000); // wait fade duration
 }
 
-setInterval(changeBackground, 5000);
+setInterval(changeBackground, 7000); // Change every 7 seconds
 
 const music = document.getElementById('background-music');
 const button = document.getElementById('music-button');
