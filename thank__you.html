@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {  
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url("images/images/4730709_40_2.jpg") no-repeat center center;
+      background-size: cover;
+      color: white;
+      font-family: 'Kumbh Sans', sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    /* Logo container at the top */
+    .thank-header {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    .thank-logo {
+      height: 120px;
+      width: auto;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+      transition: transform 0.3s ease;
+    }
+
+    .thank-logo:hover {
+      transform: scale(1.05);
+    }
+
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    a {
+      padding: 12px 24px;
+      background-color: #975908;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #c71642;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div class="thank-header">
+    <img src="images/images/full_logo.png" alt="Avitel Logo" class="thank-logo">
+  </div>
+    
+  <h1>Thank You!</h1>
+  <p>Your message has been sent. We'll get back to you shortly.</p>
+  <a href="index.html">Return to Home</a>
+
+  <script>
+    setTimeout(function () {
+      window.location.href = "index.html"; // Change path if needed
+    }, 7000); // Redirects after 7 seconds (7000 milliseconds)
+  </script>  
+</body>
+</html>

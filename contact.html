@@ -1,0 +1,67 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Get in Touch</title>
+        <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
+    </head>
+    <body id="contact-title">
+         <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html">
+                <img src="images/images/logo2.png" alt="Logo" class="navbar__logo-img">
+            </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="index.html" class="navbar__links">Home</a></li>
+                <li class="navbar__item"><a href="about.html" class="navbar__links">About</a></li>
+                <li class="navbar__item"><a href="service.html" class="navbar__links">Service</a></li>
+                <li class="navbar__item"><a href="portfolio.html" class="navbar__links">Portfolio</a></li>
+                <li class="navbar__item">
+                    <a href="tel:+14805150030" class="navbar__links">📞 (480) 515–0030</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="contact.html" class="button">Get in Touch</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Your existing Contact Page content starts here -->
+    
+        <div class="contact-title">
+            <div class="contact-title-line">
+                <div class="contact-header">
+                  <img src="images/images/full_logo.png" alt="Avitel Logo" class="contact-logo" />
+            <h2 class="contact-title-text">Get in Touch</h2>
+            </div>
+            <p class="contact-subtitle">We’d love to hear from you! Fill out the form below, and we’ll get back to you as soon as possible.</p>
+        </div>
+    
+        <div class="contact-form">
+            <form id="contact-form" method="post" action="contact-form-handler.php">
+                <input name="name" type="text" class="form-control" placeholder="Your name" required>
+                <br>
+                <input name="email" type="email" class="form-control" placeholder="Your email" required>
+                <br>
+                <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea>
+                <br>
+                <input type="submit" class="form-control submit" value="SEND MESSAGE">
+            </form>
+        </div>
+
+     <script src="app.js"></script>
+</body>
+</html>
+
+    
+    
+    
