@@ -276,12 +276,13 @@ html, body {
     white-space: nowrap;
 }
 .button:hover {
-    background: #0b0362;
+    background: #3f3604;
     transition: all 0.3s ease; 
 }
 
 .navbar__links:hover {
-    color: #370668;
+    color: #ffd700;
+    text-shadow: 0 0 8px #ffd700;
     transition: all 0.3s ease;
 
 }
@@ -325,7 +326,7 @@ html, body {
       top: -1000px;
       left: 0;
       width: 100%;
-      background: rgba(255, 255, 255, 0.8);  /* soft white transparency */
+      background: rgba(20, 20, 20, 0.95);  /* dark transparency */
       -webkit-backdrop-filter: blur(10px);  /* Safari support */
       backdrop-filter: blur(10px);
       top: 80px;
