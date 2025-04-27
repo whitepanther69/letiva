@@ -110,7 +110,8 @@ html, body {
   .mission-centered h2 {
     text-align: center;
     font-size: 3.8rem;
-    margin-bottom: 50px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     color: #2c2c2c;
     font-weight:normal;
   }
@@ -159,8 +160,10 @@ html, body {
   @media screen and (max-width: 768px) {
     .mission-block p {
       font-size: 1rem;
-    }
     
+  
+  }
+  
     .mission-block img {
       width: 95%;
     }
@@ -278,7 +281,7 @@ html, body {
 }
 .button:hover {
     background: #2a2402;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; 
     color: #ffd700; /* golden color on hover */
     text-shadow: 0 0 8px rgba(255, 215, 0, 0.8); /* golden glow */
     transition: all 0.3s ease; /* smooth transition */
@@ -287,6 +290,8 @@ html, body {
 .navbar__links:hover {
     color: #ffd700;
     text-shadow: 0 0 8px #ffd700;
+    
+
 }
 /* ----------------- Mobile Responsive Navbar ----------------- */
 @media screen and (max-width: 960px) {
@@ -328,7 +333,7 @@ html, body {
       top: -1000px;
       left: 0;
       width: 100%;
-      background: rgba(20, 20, 20, 0.95);  /* dark transparency */
+      background: rgba(20, 20, 20, 0.95);  /* soft white transparency */
       -webkit-backdrop-filter: blur(10px);  /* Safari support */
       backdrop-filter: blur(10px);
       top: 80px;
@@ -357,7 +362,7 @@ html, body {
       padding: 1.5rem;
       display: block;
       width: 100%;
-      color: #2a07b3;
+      color: #191cdc;
       text-decoration: none;
     }
   
@@ -401,19 +406,21 @@ html, body {
 
 }
 .main__content h1 {
-    position: absolute;
-    text-align: center;
-    bottom: 20px; /* <- distance from bottom */
-    left: 50%; /* <- center horizontally */
-    transform: translateX(-50%); /* <- perfect centering */
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 15px 30px;
-    border-radius: 10px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-    bottom: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  white-space: nowrap; /* force one line */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main__content h2 {
     font-size: 2.8rem;
@@ -434,23 +441,21 @@ html, body {
 }
 
 .main__content p{
-    margin-top: 1.6rem;
-    font-size: 2rem;
-    font-weight: 400;
-    max-width: 1300px;
-    margin-top: 1rem;
-    font-weight: 700;
-    color: #f8f8f8;
-    background-size: 100%;
-    line-height: 1.6;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-    text-align: center;
-    z-index: 2;            
+  margin-top: 1rem; /* only once */
+  font-size: 2rem;
+  font-weight: 700; /* only once */
+  max-width: 1300px;
+  color: #f8f8f8;
+  background-size: 100%;
+  line-height: 1.6;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  z-index: 2;               
 }
 .main__content h1,
 .main__content h2,
 .main__content p {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 .main__btn {
     font-size: 1rem;
@@ -481,6 +486,7 @@ html, body {
 }
 .main__btn:hover {
     background: linear-gradient(to top, #2575fc, #cb5b11);
+}  
 .main__btn::after {
     display: none; /* Ensures no unexpected overlays */
 
@@ -498,18 +504,30 @@ html, body {
     height: 80%;
     width: 80%;
 }
-}
-/* Services Section */
+
+/*------------- Services ---------------------Section */
+
 #services {
     padding: 60px 5%;
     text-align: center;
-    background-color: #fff; 
+    background-color: transparent; 
 }
 
 .services__container h1 {
     font-size: 2.8rem;
     color: #222;
-    margin-bottom: 15px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.services h2 {
+  font-size: 2.0rem;
+  font-weight: 600;
+  margin-top: 50px;   /* big gap above */
+  font-weight: bold;
+  margin-bottom: 30px; /* gap before the boxes */
+  text-align: center;
+  color: #222; /* dark color */
 }
 
 .services__container p {
@@ -519,6 +537,7 @@ html, body {
     margin: 0 auto;
 }
 
+
 .services__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -527,15 +546,17 @@ html, body {
 }
 
 .service__item {
-    background: #f9f9f9;
+    background: #ffffff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
     text-align: center;
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(48, 29, 8, 0.7); /* soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service__item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* stronger on hover */
 }
 
 .service__item img {
@@ -546,20 +567,59 @@ html, body {
 .service__item h3 {
     font-size: 1.5rem;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 10px 0 5px 0;
 }
 
 .service__item p {
     font-size: 1rem;
     color: #666;
+    line-height: 1.4; /* reduce spacing between lines */
+    margin: 5px 0 0 0; /* remove too much gap */
 }
 
-/* ==================================================================== */
+/* Service page -- Logo Button Styling */
+.service__btn {
+  background-color: transparent; /* Black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px; /* Fixed width */
+  height: 140px; /* Fixed height */
+  border-radius: 12px;
+  margin: 0 auto 15px auto; /* Spacing below */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Logo Images */
+.service__btn img {
+  max-width: 80%;
+  max-height: 100px;
+  object-fit: contain;
+  display: block; /* Safe cross-browser */
+}
+
+/* Hover Effect */
+.service__btn:hover {
+  transform: scale(1.1); /* Slight zoom-in effect */
+  background-color: transparent; /* Slightly lighter black */
+}
+
+/* Text Styling */
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
 p {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  max-width: 800px; /* Nice for centered layout */
 }
 
 /* ++++++++++++++++++++++++++Navbar ++++++++++++++++++++++++++++++++++++++++++=====*/
@@ -581,10 +641,28 @@ p {
 }
 
 .navbar__links {
-    color: white;
+    color: #f5f0e1;
     text-decoration: none;
     font-size: 1.2em;
     white-space: nowrap;
+}
+
+/* Add new for phone */
+.phone-text {
+  color: #f5f0e1; /* same soft color */
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold; 
+}
+.phone-icon {
+  color: inherit; /* inherit navbar link color */
+  margin-right: 5px; /* nice small space between icon and number */
+  font-size: 1.2em;
+}
+
+.phone-text:hover {
+    color: #ffd700; /* gold on hover */
+    text-shadow: 0 0 8px #ffd700;
 }
 /*=================== Hero About =========================================*/
 
@@ -605,97 +683,6 @@ p {
     color: #666;
     max-width: 600px;
     margin: 20px auto;
-}
-/*===================================================*/
-
-.services__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-/* Default style for all logo buttons */
-.service__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px; /* Adjust size */
-    height: 100px; /* Adjust size */
-    border-radius: 10px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    padding: 10px;
-}
-
-
-/* Services Section Styling */
-.services {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #fff;
-}
-
-/* Grid Layout */
-.services__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 30px;
-    justify-content: center;
-    align-items: start;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Service Item */
-.service__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-/* Logo Button Styling */
-.service__btn {
-    background-color: #fff; /* Black background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px; /* Fixed width */
-    height: 140px; /* Fixed height */
-    border-radius: 12px;
-    margin-bottom: 15px; /* Spacing below */
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-/* Logo Images */
-.service__btn img {
-    max-width: 80%;
-    max-height: 100px;
-    object-fit: contain;
-}
-
-/* Hover Effect */
-.service__btn:hover {
-    transform: scale(1.1); /* Slight zoom-in effect */
-    background-color: #222; /* Slightly lighter black */
-}
-
-/* Text Styling */
-h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1rem;
-    color: #555;
-    max-width: 280px;
-    line-height: 1.5;
 }
 
 /*======================Email form===================================================*/
@@ -901,7 +888,7 @@ footer {
     left: 0;
     width: 100%;
     z-index: 9999;
-    background: rgba(233, 221, 204, 0.3); /* soft transparent beige */
+    background: rgba(80, 62, 54, 0.70); /* soft transparent beige */
     -webkit-backdrop-filter: saturate(180%) blur(8px);
     backdrop-filter: saturate(180%) blur(8px);
   }
@@ -1027,6 +1014,13 @@ footer {
     100% {
       transform: scale(1);
       box-shadow:  0 2px 4px rgba(0, 0, 0, 0.2);;
+    }
+  }
+  @media (max-width: 768px) {
+    .main__content h1 {
+      white-space: normal; /* allow text to wrap on small screens */
+      font-size: 2rem; /* smaller text for phones */
+      padding: 10px 20px; /* a little tighter padding */
     }
   }
   
