@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Website</title>
-  
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kumbh+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
+    <script src="https://unpkg.com/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   
@@ -42,110 +41,165 @@
               </ul>                  
         </div>
     </nav>
+<!-- Title and subtitle -->
+  <section class="portfolio-header">
+  <h1>Our Portfolio</h1>
+  <p>Discover some of our finest projects crafted with passion and precision.</p>
+</section>    
+<section class="portfolio-gallery">
 
-    <section class="portfolio-gallery">
+  <!-- Video Section -->
+  <div class="portfolio-item">
+    <div class="portfolio-media">
+      <video controls>
+        <source src="images/images/light_chair.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="portfolio-text">
+      <h3>Luxury Home Theater Lighting</h3>
+      <p>Immerse yourself in cinematic brilliance with our custom ambient lighting systems.</p>
+    </div>
+  </div>
 
-        <!-- Video Section -->
-        <div class="portfolio-item">
-          <div class="portfolio-media">
-            <video controls>
-              <source src="images/images/light_chair.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="portfolio-text">
-            <h3>Luxury Home Theater Lighting</h3>
-            <p>Immerse yourself in cinematic brilliance with our custom ambient lighting systems. Designed for luxury home theaters, this setup integrates LED strip accents to elevate the visual experience, while maintaining a sleek and modern aesthetic.</p>
-          </div>
-        </div>
-      
-        <!-- Project 1: Screen Innovations -->
-        <div class="portfolio-item reverse">
-          <img src="images/images/bigscreen.jpg" alt="Luxury Screen Installation">
-          <div class="portfolio-text">
-            <h3>Luxury Screen Installations</h3>
-            <p>Achieve visual perfection with ultra-slim 4K/8K display 
-                screens, hidden wiring, and motorized lifts. Our screen systems are tailored
-                 for home theaters, boardrooms, or yachts—delivering elegance, impact,
-                  and seamless integration.</p>
-          </div>
-        </div>
-      
-        <!-- Project 2: Power-Integrated Desk -->
-        <div class="portfolio-item">
-          <img src="images/images/table2.jpg" alt="Power Integrated Desk">
-          <div class="portfolio-text">
-            <h3>Smart Desk with Integrated Power</h3>
-            <p>Our premium desks come equipped with built-in outlets, 
-                USB ports, and cable channels—perfect for boardrooms and home offices. 
-                They combine modern style with functionality for clean, connected workspaces.</p>
-          </div>
-        </div>
-      
-        <!-- Project 3: External Surveillance -->
-        <div class="portfolio-item reverse">
-          <img src="images/images/videocamera.jpg" alt="Surveillance Camera System">
-          <div class="portfolio-text">
-            <h3>Outdoor Surveillance Systems</h3>
-            <p>Secure your property with our high-definition, weatherproof camera solutions. 
-                Integrated with motion detection and remote access, 
-                they provide complete perimeter coverage—day and night.</p>
-          </div>
-        </div>
-      
-        <!-- Project 4: AV Rack -->
-        <div class="portfolio-item">
-          <img src="images/images/cable3.jpg" alt="AV Equipment Rack">
-          <div class="portfolio-text">
-            <h3>Structured AV Equipment Rack</h3>
-            <p>Engineered for efficiency, our AV racks centralize amplifiers, 
-                servers, and switches into one professional setup. Optimized for 
-                cooling and cable management, it ensures seamless audio/video 
-                distribution and smart home automation.</p>
-          </div>
-        </div>
-      
-        
-      </section>
+  <!-- Project 1 -->
+  <div class="portfolio-item reverse">
+    <img src="images/images/bigscreen.jpg" alt="Luxury Screen Installation" class="zoomable">
+    <div class="portfolio-text">
+      <h3>Luxury Screen Installations</h3>
+      <p>Achieve visual perfection with ultra-slim 4K/8K screens, hidden wiring, and motorized lifts. Tailored for home theaters, boardrooms, or yachts—delivering elegance, impact, and seamless integration.</p>
+    </div>
+  </div>
 
+  <!-- Project 2 -->
+  <div class="portfolio-item">
+    <img src="images/images/table2.jpg" alt="Power Integrated Desk" class="zoomable">
+    <div class="portfolio-text">
+      <h3>Smart Desk with Integrated Power</h3>
+      <p>Premium desks with built-in outlets, USB ports, and cable channels—perfect for boardrooms and home offices. Clean, connected, and modern.</p>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+  </div>
 
-      <footer>
-        <div class="footer-container">
-          <div class="footer-box">
-            <h3>Address</h3>
-        <a href="https://www.google.com/maps?q=7363+E.+Adobe+Dr.+Ste.+%23120,+Scottsdale,+AZ+85255" target="blank">
-        <p><img src="images/images/map.png" class="icon"alt="Map icon" />7363 E. Adobe Dr. Ste. #120</p>
+  <!-- Project 3 -->
+  <div class="portfolio-item reverse">
+    <img src="images/images/videocamera.jpg" alt="Surveillance Camera System" class="zoomable">
+    <div class="portfolio-text">
+      <h3>Outdoor Surveillance Systems</h3>
+      <p>High-definition, weatherproof camera solutions with motion detection and remote access—complete perimeter coverage day and night.</p>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+  </div>
+
+  <!-- Project 4 -->
+  <div class="portfolio-item">
+    <img src="images/images/cable3.jpg" alt="AV Equipment Rack" class="zoomable">
+    <div class="portfolio-text">
+      <h3>Structured AV Equipment Rack</h3>
+      <p>Efficient AV racks centralizing amplifiers, servers, and switches. Optimized for cooling, cable management, and seamless smart home automation.</p>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+  </div>
+
+  <!-- Project 5 -->
+  <div class="portfolio-item reverse">
+    <img src="images/images/bigscreen.jpg" alt="Elegant Home Cinema" class="zoomable">
+    <div class="portfolio-text">
+      <h3>Elegant Home Cinema Installation</h3>
+      <p>Luxurious private theaters crafted with top-tier projection, sound insulation</p>
+     
+    </div>
+  </div>
+
+  <!-- Project 6 -->
+  <div class="portfolio-item">
+    <img src="images/images/Bluechair.jpg" alt="Integrated Smart Lighting" class="zoomable">
+    <div class="portfolio-text">
+      <h3>Integrated Smart Lighting</h3>
+      <p>Intelligent lighting systems to create ambiance and enhance convenience. Control brightness, colors, and moods from your smart device.</p>
+    </div>
+  </div>
+
+  <!-- Project 7 -->
+  <div class="portfolio-item reverse">
+    <img src="images/images/bigscreen2.jpg" alt="Outdoor Entertainment" class="zoomable">
+    <div class="portfolio-text">
+      <h3>Outdoor Entertainment Systems</h3>
+      <p>Extend your living spaces with all-weather speakers, screens, and lighting for the perfect outdoor entertaining environment.</p>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latinrd McClintock,.</p>
+    </div>
+  </div>
+
+  <!-- Project 8 -->
+  <div class="portfolio-item">
+    <img src="images/images/bigscreen3.jpg" alt="Boardroom AV Solutions" class="zoomable">
+    <div class="portfolio-text">
+      <h3>Boardroom AV Solutions</h3>
+      <p>Professional conference rooms featuring advanced audio, video, and contro</p>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has root</p>
+    </div>
+  </div>
+
+  <!-- Project 9 -->
+  <div class="portfolio-item reverse">
+    <img src="images/images/4730709_37_2.jpg" alt="Home Automation Hubs" class="zoomable">
+    <div class="portfolio-text">
+      <h3>Home Automation Control Hubs</h3>
+      <p>Centralize and simplify your home's lighting, security, and entertainment into one easy-to-use automation system.</p>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of </p>
+    </div>
+  </div>
+
+  <!-- Project 10 -->
+  <div class="portfolio-item">
+    <img src="images/images/4730709_24_2.jpg" alt="Luxury Hidden Speakers" class="zoomable">
+    <div class="portfolio-text">
+      <h3>Luxury Hidden Speakers</h3>
+      <p>Experience high-end audio without compromising decor. Invisible in-w.</p>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It h</p>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-box">
+      <h3>Address</h3>
+  <a href="https://www.google.com/maps?q=7363+E.+Adobe+Dr.+Ste.+%23120,+Scottsdale,+AZ+85255" target="blank">
+  <p><img src="images/images/map.png" class="icon"alt="Map icon" />7363 E. Adobe Dr. Ste. #120</p>
+  </a>
+    </div>
+    <div class="footer-box">
+      <h3>Phone</h3>
+      <p>
+        <a href="tel:+14805150030">
+          <img src="images/images/phone.png" class="icon" alt="Phone Icon">
+          (480) 515–0030
         </a>
-          </div>
-          <div class="footer-box">
-            <h3>Phone</h3>
-            <p>
-              <a href="tel:+14805150030">
-                <img src="images/images/phone.png" class="icon" alt="Phone Icon">
-                (480) 515–0030
-              </a>
-            </p>
-          </div>
-          
-          <div class="footer-box">
-            <h3>Email</h3>
-            <p>
-              <a href="mailto:info@avitel.com">
-                <img src="images/images/email.png" class="icon" alt="Email Icon">
-                info@avitel.com
-              </a>
-            </p>
-          </div>  
-          
-        <div class="footer-bottom">
-          <p>© 2024 Avitel. All rights reserved.</p>
-        </div>
-      </footer>
-
-      <script src="app.js"></script>
-
-    </body>
-    </html>
-      
+      </p>
+    </div>
     
-           
+    <div class="footer-box">
+      <h3>Email</h3>
+      <p>
+        <a href="mailto:info@avitel.com">
+          <img src="images/images/email.png" class="icon" alt="Email Icon">
+          info@avitel.com
+        </a>
+      </p>
+    </div>  
+    
+  <div class="footer-bottom">
+    <p>© 2024 Avitel. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="app.js"></script>
+</body>
+</html>
+
+
+
+     
