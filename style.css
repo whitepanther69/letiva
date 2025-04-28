@@ -908,6 +908,7 @@ footer {
  
 
   /*==============================PORTOFOLIO______________*/
+  /*==============================PORTOFOLIO______________*/
   .navbar {
     position: fixed;
     top: 0;
@@ -918,7 +919,8 @@ footer {
     -webkit-backdrop-filter: saturate(180%) blur(8px);
     backdrop-filter: saturate(180%) blur(8px);
   }
-  
+ 
+
   body {
     display: flex;
     flex-direction: column;
@@ -927,24 +929,46 @@ footer {
     background-color: #f8f4f0; /* light beige / cream */
     margin: 0;
     font-family: 'Kumbh Sans', sans-serif;
+
   }
-.portfolio-gallery {
+  /* ---- Title and Subtitle section --Portfolio-- */
+
+  .portfolio-header {
+  text-align: center;
+  padding-top: 120px; /* Enough for fixed navbar */
+  margin-bottom: 40px; /* Space before gallery starts */
+  }
+
+  .portfolio-header h1 {
+  font-size: 48px;
+  color: #222;
+  margin-bottom: 10px;
+  }
+
+  .portfolio-header p {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto; /* Center the subtitle */
+ }
+
+  .portfolio-gallery {
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    padding: 120px 20px 60px;
-    max-width: 1200px;
+    gap: 3rem;
+    padding: 0 20px 60px;
+    max-width: 1400px;
     margin: 0 auto;
-    background-color: #f5f5f0; /* light beige background */
+    
   }
   
   .portfolio-item {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* important for mobile */ 
+  }  
   
   /* Reverse layout */
   .portfolio-item.reverse {
@@ -954,23 +978,24 @@ footer {
   /* Images and Video */
   .portfolio-item img,
   .portfolio-item video {
-    max-width: 100%;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     height: auto;
-    border-radius: 10px;
+    object-fit: cover; /* <<< important for video too */
+    border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
   
   /* Video specific wrapper */
   .portfolio-media {
-    flex: 1;
-    min-width: 300px;
+    flex: 1 1 300px; /* flexible image/video size */ ;
+    
   }
   
   .portfolio-text {
-    flex: 1;
-    min-width: 300px;
-  }
+    flex: 1 1 300px;
+    max-width: 600px;
+  } 
   
   .portfolio-text h3 {
     font-size: 24px;
@@ -979,27 +1004,42 @@ footer {
   }
   
   .portfolio-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #444;
+    margin-top: 1rem;
+    line-height: 1.8;
+    font-size: 17px;
+    color: #666;
   }
+  
   
   @media (max-width: 768px) {
     .portfolio-item,
     .portfolio-item.reverse {
       flex-direction: column;
       text-align: center;
+      align-items: center;
+
     }
   
     .portfolio-item img,
     .portfolio-item video {
+      max-width: 500px;
       width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 16px; /* Smooth corners */
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.30); /* Soft glow ONLY around images */
+      transition: box-shadow 0.4s ease;
+    }
+    .portfolio-item img:hover,
+    .portfolio-item video:hover {
+     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
     }
   
     .portfolio-text {
       padding-top: 20px;
     }
   }
+  
   .thank-logo {
     height: 120px;
     width: auto;
