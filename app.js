@@ -71,6 +71,7 @@ document.addEventListener('click', function(e) {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function() {
 const images = [
   "images/images/4730709_2.jpg",
   "images/images/4730709_24_2.jpg",
@@ -98,7 +99,9 @@ function changeBackground() {
   }, 3000); // wait fade duration
 }
 
-setInterval(changeBackground, 7000); // Change every 7 seconds
+   setInterval(changeBackground, 8000); // Change every 8 seconds
+});
+
 
 const music = document.getElementById('background-music');
 const button = document.getElementById('music-button');
@@ -126,3 +129,38 @@ function fadeInMusic() {
     }
   }, 100); // every 100 milliseconds
 }
+
+
+// Zoom effect on portfolio images
+const zoomableImages = document.querySelectorAll('.zoomable');
+zoomableImages.forEach(img => {
+  img.style.cursor = 'zoom-in'; // Make it obvious it's clickable
+  img.addEventListener('click', () => {
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.background = 'rgba(0, 0, 0, 0.8)';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.zIndex = 99999;
+
+    const zoomedImg = document.createElement('img');
+    zoomedImg.src = img.src;
+    zoomedImg.style.maxWidth = '90%';
+    zoomedImg.style.maxHeight = '90%';
+    zoomedImg.style.borderRadius = '10px';
+    zoomedImg.style.boxShadow = '0 0 20px rgba(0,0,0,0.5)';
+    zoomedImg.style.cursor = 'zoom-out';
+
+    overlay.appendChild(zoomedImg);
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', () => {
+      document.body.removeChild(overlay);
+    });
+  });
+});
