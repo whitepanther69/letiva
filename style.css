@@ -945,10 +945,10 @@ footer {
   margin-bottom: 10px;
   }
 
-  .portfolio-header p {
-  font-size: 18px;
-  color: #666;
-  max-width: 600px;
+  .portfolio-header h3 {
+  font-size: 30px;
+  color: #222;
+  max-width: 1200px;
   margin: 0 auto; /* Center the subtitle */
  }
 
