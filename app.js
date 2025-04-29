@@ -76,7 +76,8 @@ const images = [
   "images/images/4730709_2.jpg",
   "images/images/4730709_24_2.jpg",
   "images/images/4730709_37_2.jpg",
-  "images/images/4730709_40_2.jpg"
+  "images/images/4730709_40_2.jpg",
+  "images/images/4730709_44_2.jpg"
 ];
 
 let currentIndex = 0;
@@ -99,7 +100,7 @@ function changeBackground() {
   }, 3000); // wait fade duration
 }
 
-   setInterval(changeBackground, 8000); // Change every 8 seconds
+   setInterval(changeBackground, 7000); // Change every 7 seconds
 });
 
 
