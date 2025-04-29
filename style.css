@@ -983,7 +983,7 @@ footer {
     height: auto;
     object-fit: cover; /* <<< important for video too */
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(48, 29, 8, 0.7); /* soft shadow 
   }
   
   /* Video specific wrapper */
